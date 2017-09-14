@@ -35,15 +35,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // 録画ボタン
-        //self.recordingButton = RecordingButton(self)
+        self.recordingButton = RecordingButton(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingSessionConfiguration()
-        
+//       let configuration = ARWorldTrackingSessionConfiguration()
+        let configuration = ARWorldTrackingConfiguration()
+
         // Run the view's session
         sceneView.session.run(configuration)
         
